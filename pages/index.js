@@ -21,17 +21,7 @@ const Home = ({ products }) => {
   return <div className='rootcard'>{ProductList}</div>;
 };
 
-export const getStaticProps = async () => {
-  const res = await fetch(`${baseUrl}/api/products`);
-  const data = await res.json();
-  return {
-    props: {
-      products: data,
-    },
-  };
-};
-
-// export const getServerSideProps = async () => {
+// export const getStaticProps = async () => {
 //   const res = await fetch(`${baseUrl}/api/products`);
 //   const data = await res.json();
 //   return {
@@ -40,5 +30,15 @@ export const getStaticProps = async () => {
 //     },
 //   };
 // };
+
+export const getServerSideProps = async () => {
+  const res = await fetch(`${baseUrl}/api/products`);
+  const data = await res.json();
+  return {
+    props: {
+      products: data,
+    },
+  };
+};
 
 export default Home;

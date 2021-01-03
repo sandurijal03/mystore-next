@@ -6,7 +6,7 @@ const initDB = () => {
     return;
   }
   mongoose
-    .connect('mongodb://localhost:27017/ecommerce-next', {
+    .connect(`${process.env.MONGO_URI}`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,

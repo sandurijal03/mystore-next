@@ -147,7 +147,7 @@ export const getServerSideProps = async ({ params: { id } }) => {
 
 // export const getStaticPaths = () => {
 //   return {
-//     paths: [{ params: { id: '5fef8cbffaacaf3b638c8af9' } }],
+//     paths: [{ params: { id: '5ff0ee561ee6729b2061ceea' } }],
 //     fallback: true,
 //   };
 // };

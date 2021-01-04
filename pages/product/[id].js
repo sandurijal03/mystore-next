@@ -125,15 +125,15 @@ const Product = ({ product }) => {
   );
 };
 
-// export const getServerSideProps = async ({ params: { id } }) => {
-//   const response = fetch(`http://localhost:3000/api/product/${id}`);
-//   const data = await response.json();
-//   return {
-//     props: {
-//       product: data,
-//     },
-//   };
-// };
+export const getServerSideProps = async ({ params: { id } }) => {
+  const response = fetch(`http://localhost:3000/api/product/${id}`);
+  const data = await response.json();
+  return {
+    props: {
+      product: data,
+    },
+  };
+};
 
 // export const getStaticProps = async ({ params: { id } }) => {
 //   const response = await fetch(`${baseUrl}/api/product/${id}`);
